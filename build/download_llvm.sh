@@ -138,19 +138,19 @@ if [[ "${OS}" = "Darwin" ]]; then
   fi
 fi
 
-echo Getting LLVM r"${CLANG_REVISION}" in "${LLVM_DIR}"
-if ! svn co --force "${LLVM_REPO_URL}/${LLVM_REPO_PATH}@${CLANG_REVISION}" \
+echo Getting LLVM in "${LLVM_DIR}"
+if ! svn co --force "${LLVM_REPO_URL}/${LLVM_REPO_PATH}" \
                     "${LLVM_DIR}"; then
   echo Checkout failed, retrying
   rm -rf "${LLVM_DIR}"
-  svn co --force "${LLVM_REPO_URL}/${LLVM_REPO_PATH}@${CLANG_REVISION}" "${LLVM_DIR}"
+  svn co --force "${LLVM_REPO_URL}/${LLVM_REPO_PATH}" "${LLVM_DIR}"
 fi
 
-echo Getting clang r"${CLANG_REVISION}" in "${CLANG_DIR}"
-svn co --force "${LLVM_REPO_URL}/${CLANG_REPO_PATH}@${CLANG_REVISION}" "${CLANG_DIR}"
+echo Getting clang in "${CLANG_DIR}"
+svn co --force "${LLVM_REPO_URL}/${CLANG_REPO_PATH}" "${CLANG_DIR}"
 
-echo Getting compiler-rt r"${CLANG_REVISION}" in "${COMPILER_RT_DIR}"
-svn co --force "${LLVM_REPO_URL}/${COMPILER_RT_REPO_PATH}@${CLANG_REVISION}" \
+echo Getting compiler-rt in "${COMPILER_RT_DIR}"
+svn co --force "${LLVM_REPO_URL}/${COMPILER_RT_REPO_PATH}" \
                "${COMPILER_RT_DIR}"
 
 # Echo all commands.
