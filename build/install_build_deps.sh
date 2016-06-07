@@ -3,9 +3,9 @@
 # Adapted from Chromium's install-build-deps.sh
 
 if ! egrep -q \
-    'Ubuntu (10\.04|10\.10|11\.04|11\.10|lucid|maverick|natty|oneiric)' \
+    'Ubuntu (10\.04|10\.10|11\.04|11\.10|16\.04|lucid|maverick|natty|oneiric|Xenial Xerus)' \
     /etc/issue; then
-  echo "Only Ubuntu 10.04 (lucid) through 11.10 (oneiric) are currently" \
+  echo "Only Ubuntu 10.04 (lucid) through 11.10 (oneiric) and 16.04 are currently" \
       "supported" >&2
   exit 1
 fi

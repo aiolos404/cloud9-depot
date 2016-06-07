@@ -37,9 +37,9 @@ repo_paths = {
   },
 
   "rel31": {
-    "llvm_repo_path": "llvm/tags/RELEASE_31/final",
-    "clang_repo_path": "cfe/tags/RELEASE_31/final",
-    "compiler_rt_repo_path": "compiler-rt/tags/RELEASE_31/final",
+    "llvm_repo_path": "llvm/tags/RELEASE_380/final",
+    "clang_repo_path": "cfe/tags/RELEASE_380/final",
+    "compiler_rt_repo_path": "compiler-rt/tags/RELEASE_380/final",
   },
 }
 

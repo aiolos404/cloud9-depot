@@ -32,7 +32,7 @@ vars = {
   "libcxx_trunk":
     "http://llvm.org/svn/llvm-project/libcxx/trunk",
   "libcxx_release31":
-    "http://llvm.org/svn/llvm-project/libcxx/tags/RELEASE_31/final",
+    "http://llvm.org/svn/llvm-project/libcxx/tags/RELEASE_380/final",
 }
 
 
@@ -40,14 +40,14 @@ deps = {
   "src/cloud9":
     "git+https://github.com/dslab-epfl/cloud9.git",
   "src/klee-uclibc":
-    "git+https://github.com/dslab-epfl/cloud9-uclibc.git",
+    "git+https://github.com/klee/klee-uclibc.git",
 
   "src/third_party/stp":
-    "git+https://github.com/stp/stp.git@9ab2a59",
+    "git+https://github.com/stp/stp.git",
   "src/third_party/gyp":
     "http://gyp.googlecode.com/svn/trunk@1417",
   "src/third_party/boolector":
-    "git+https://github.com/dslab-epfl/cloud9-boolector.git",
+    "git+https://github.com/aiolos404/Aiolos404boolector.git",
 
   # Testing targets
   "src/testing_targets/libcxx":

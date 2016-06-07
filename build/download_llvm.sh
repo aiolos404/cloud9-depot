@@ -82,9 +82,9 @@ if [[ -n "${trunk}" ]]; then
 	CLANG_REPO_PATH="cfe/trunk"
 	COMPILER_RT_REPO_PATH="compiler-rt/trunk"
 else
-	LLVM_REPO_PATH="llvm/tags/RELEASE_31/final"
-	CLANG_REPO_PATH="cfe/tags/RELEASE_31/final"
-	COMPILER_RT_REPO_PATH="compiler-rt/tags/RELEASE_31/final"
+	LLVM_REPO_PATH="llvm/tags/RELEASE_380/final"
+	CLANG_REPO_PATH="cfe/tags/RELEASE_380/final"
+	COMPILER_RT_REPO_PATH="compiler-rt/tags/RELEASE_380/final"
 fi
 
 # Xcode and clang don't get along when predictive compilation is enabled.
