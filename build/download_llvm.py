@@ -13,7 +13,7 @@ import subprocess
 
 
 # Do NOT CHANGE this if you don't know what you're doing
-clang_revision = 158819
+clang_revision = 272058
 
 script_dir = os.path.dirname(__file__)
 cloud9_dir = os.path.join(script_dir, os.pardir)
