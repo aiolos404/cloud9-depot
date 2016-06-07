@@ -47,7 +47,7 @@ deps = {
   "src/third_party/gyp":
     "git+https://chromium.googlesource.com/external/gyp.git",
   "src/third_party/boolector":
-    "git+https://github.com/aiolos404/Aiolos404boolector.git",
+    "git+https://github.com/dslab-epfl/cloud9-boolector.git",
 
   # Testing targets
   "src/testing_targets/libcxx":
