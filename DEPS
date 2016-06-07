@@ -45,7 +45,7 @@ deps = {
   "src/third_party/stp":
     "git+https://github.com/stp/stp.git",
   "src/third_party/gyp":
-    "http://gyp.googlecode.com/svn/trunk@1417",
+    "git+https://chromium.googlesource.com/external/gyp.git",
   "src/third_party/boolector":
     "git+https://github.com/aiolos404/Aiolos404boolector.git",
 
