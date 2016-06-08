@@ -13,7 +13,7 @@ import subprocess
 
 
 # Do NOT CHANGE this if you don't know what you're doing
-clang_revision = 272058
+clang_revision = 158819
 
 script_dir = os.path.dirname(__file__)
 cloud9_dir = os.path.join(script_dir, os.pardir)
@@ -37,9 +37,9 @@ repo_paths = {
   },
 
   "rel31": {
-    "llvm_repo_path": "llvm/tags/RELEASE_380/final",
-    "clang_repo_path": "cfe/tags/RELEASE_380/final",
-    "compiler_rt_repo_path": "compiler-rt/tags/RELEASE_380/final",
+    "llvm_repo_path": "llvm/tags/RELEASE_31/final",
+    "clang_repo_path": "cfe/tags/RELEASE_31/final",
+    "compiler_rt_repo_path": "compiler-rt/tags/RELEASE_31/final",
   },
 }
 

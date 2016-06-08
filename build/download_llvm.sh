@@ -8,7 +8,7 @@
 # Do NOT CHANGE this if you don't know what you're doing -- see
 # https://code.google.com/p/chromium/wiki/UpdatingClang
 # Reverting problematic clang rolls is safe, though.
-CLANG_REVISION=272058
+CLANG_REVISION=159523
 
 
 THIS_DIR="$(dirname "${0}")"
@@ -82,9 +82,9 @@ if [[ -n "${trunk}" ]]; then
 	CLANG_REPO_PATH="cfe/trunk"
 	COMPILER_RT_REPO_PATH="compiler-rt/trunk"
 else
-	LLVM_REPO_PATH="llvm/tags/RELEASE_380/final"
-	CLANG_REPO_PATH="cfe/tags/RELEASE_380/final"
-	COMPILER_RT_REPO_PATH="compiler-rt/tags/RELEASE_380/final"
+	LLVM_REPO_PATH="llvm/tags/RELEASE_31/final"
+	CLANG_REPO_PATH="cfe/tags/RELEASE_31/final"
+	COMPILER_RT_REPO_PATH="compiler-rt/tags/RELEASE_31/final"
 fi
 
 # Xcode and clang don't get along when predictive compilation is enabled.
@@ -138,19 +138,19 @@ if [[ "${OS}" = "Darwin" ]]; then
   fi
 fi
 
-echo Getting LLVM in "${LLVM_DIR}"
-if ! svn co --force "${LLVM_REPO_URL}/${LLVM_REPO_PATH}" \
+echo Getting LLVM r"${CLANG_REVISION}" in "${LLVM_DIR}"
+if ! svn co --force "${LLVM_REPO_URL}/${LLVM_REPO_PATH}@${CLANG_REVISION}" \
                     "${LLVM_DIR}"; then
   echo Checkout failed, retrying
   rm -rf "${LLVM_DIR}"
-  svn co --force "${LLVM_REPO_URL}/${LLVM_REPO_PATH}" "${LLVM_DIR}"
+  svn co --force "${LLVM_REPO_URL}/${LLVM_REPO_PATH}@${CLANG_REVISION}" "${LLVM_DIR}"
 fi
 
-echo Getting clang in "${CLANG_DIR}"
-svn co --force "${LLVM_REPO_URL}/${CLANG_REPO_PATH}" "${CLANG_DIR}"
+echo Getting clang r"${CLANG_REVISION}" in "${CLANG_DIR}"
+svn co --force "${LLVM_REPO_URL}/${CLANG_REPO_PATH}@${CLANG_REVISION}" "${CLANG_DIR}"
 
-echo Getting compiler-rt in "${COMPILER_RT_DIR}"
-svn co --force "${LLVM_REPO_URL}/${COMPILER_RT_REPO_PATH}" \
+echo Getting compiler-rt r"${CLANG_REVISION}" in "${COMPILER_RT_DIR}"
+svn co --force "${LLVM_REPO_URL}/${COMPILER_RT_REPO_PATH}@${CLANG_REVISION}" \
                "${COMPILER_RT_DIR}"
 
 # Echo all commands.
