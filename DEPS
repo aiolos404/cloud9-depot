@@ -40,7 +40,7 @@ deps = {
   "src/cloud9":
     "git+https://github.com/dslab-epfl/cloud9.git",
   "src/klee-uclibc":
-    "git+https://github.com/klee/klee-uclibc.git",
+    "git+https://github.com/dslab-epfl/cloud9-uclibc.git",
 
   "src/third_party/stp":
     "git+https://github.com/stp/stp.git",
